@@ -4,6 +4,9 @@ import "./AllSalesPage.css"
 import GameCardForAll from '../components/GameCardForAll'
 import NavbarMobile from '../components/NavbarMobile'
 import GameCardShimmer from "../components/GameCardShimmer"
+import closeIcon from "../../public/closeIcon.png"
+import filterOnIcon from "../../public/filterOn.png"
+import filterOffIcon from "../../public/filterOff.png"
 
 export default function AllSalesPage(props:any) {
 
@@ -378,7 +381,7 @@ export default function AllSalesPage(props:any) {
                         <div className='flex w-full justify-end md:hidden'>
                             <img 
                             onClick={()=>{setSidebarIsOpen(false)}}
-                            src='public\closeIcon.png' 
+                            src={closeIcon} 
                             className=' size-6'></img>
                         </div>
 
@@ -444,7 +447,7 @@ export default function AllSalesPage(props:any) {
                                     resetAllFiltersFunction()
                                 }}>
                                     <button>Reset</button>
-                                    <img className='size-6' src="public/filterOn.png"></img>
+                                    <img className='size-6' src={filterOnIcon}></img>
                                 </div>
                                 
                                 <div 
@@ -452,7 +455,7 @@ export default function AllSalesPage(props:any) {
                                 onClick={()=>{
                                     setSidebarIsOpen(!sidebarIsOpen);}}>
                                     <button>{sidebarIsOpen? "Minimize" : "Extend"}</button>
-                                    <img className='size-6' src={sidebarIsOpen? "public/filterOff.png" : "public/filterOn.png"}></img>
+                                    <img className='size-6' src={sidebarIsOpen? filterOffIcon : filterOnIcon}></img>
                                 </div>
                             </div>
                         </div>

@@ -4,6 +4,9 @@ import GameCard from '../components/GameCard'
 import NavbarMobile from '../components/NavbarMobile'
 import GameCardShimmer from "../components/GameCardShimmer"
 import { Link } from 'react-router-dom'
+import starIcon from "../../public/starIcon.png"
+import arrowDownIcon from "../../public/arrowDown.png"
+import arrowUpIcon from "../../public/arrowUp.png"
 
 
 
@@ -95,9 +98,9 @@ export default function homepage(props:any) {
         <div className=' flex flex-col gap-2 w-full'>
           <div className='flex w-full justify-between items-center'>
             <h1 className='flex justify-center items-center w-fit gap-4 text-[24px] md:text-[40px] text-[#022523] font-semibold'>
-              <img className='animate-spin rounded-full md:size-8 size-4' src='../../public/starIcon.png'></img>
+              <img className='animate-spin rounded-full md:size-8 size-4' src={starIcon}></img>
               <span>Free games</span>
-              <img className='animate-spin rounded-full md:size-8 size-4' src='../../public/starIcon.png'></img>
+              <img className='animate-spin rounded-full md:size-8 size-4' src={starIcon}></img>
             </h1>
             <Link to={"/AllSales"} className='text-[16px] md:text-[20px] font-semibold text-[#022523] hover:underline-offset-2 hover:underline'>See all</Link>
           </div>
@@ -108,7 +111,7 @@ export default function homepage(props:any) {
           <div className='flex w-full justify-between items-center'>
             <h1 className='flex justify-center items-center w-fit gap-4 text-[24px] md:text-[40px] text-[#022523] font-semibold'>
               <span>$20 and under</span>
-              <img className='animate-bounce rounded-full md:size-8 size-4' src='../../public/arrowDown.png'></img>
+              <img className='animate-bounce rounded-full md:size-8 size-4' src={arrowDownIcon}></img>
             </h1>
             <Link to={"/AllSales"} className='text-[16px] md:text-[20px] font-semibold text-[#022523] hover:underline-offset-2 hover:underline'>See all</Link>
           </div>
@@ -120,7 +123,7 @@ export default function homepage(props:any) {
           <div className='flex w-full justify-between items-center'>
             <h1 className='flex justify-center items-center w-fit gap-4 text-[24px] md:text-[40px] text-[#022523] font-semibold'>
               <span>90% and up</span>
-              <img className='animate-bounce rounded-full md:size-8 size-4' src='../../public/arrowUp.png'></img>
+              <img className='animate-bounce rounded-full md:size-8 size-4' src={arrowUpIcon}></img>
             </h1>
             <Link to={"/AllSales"} className='text-[16px] md:text-[20px] font-semibold text-[#022523] hover:underline-offset-2 hover:underline'>See all</Link>
           </div>

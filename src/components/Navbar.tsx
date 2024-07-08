@@ -1,5 +1,9 @@
 import React from 'react'
 import {Link} from "react-router-dom"
+import percentageIcon from '../../public/percentageIcon.png'
+import searchIcon from '../../public/searchIcon.png'
+import closeIcon from '../../public/closeIcon.png'
+import loadingIndicatorIcon from '../../public/loadingIndicator.png'
 
 export default function Navbar(props:any) {
 
@@ -81,10 +85,10 @@ export default function Navbar(props:any) {
         to={"/"}
         className='flex justify-center items-center gap-2'>
             <h1 className='text-[32px] text-[#022523] font-black italic'>GS</h1>
-            <img className='size-[32px]' src='../../public/percentageIcon.png'></img>
+            <img className='size-[32px]' src={percentageIcon}></img>
         </Link>
         <div className='w-[50%] h-full relative'>
-          <img className='absolute size-6 top-[50%] translate-y-[-50%] left-4' src='public\searchIcon.png'></img>
+          <img className='absolute size-6 top-[50%] translate-y-[-50%] left-4' src={searchIcon}></img>
           <input 
           onFocusCapture={()=>{setShowSearchBarResults(true)}}
           
@@ -112,7 +116,7 @@ export default function Navbar(props:any) {
           </input>
           <img 
           className={`${searchInput.length === 0 ? "hidden" :""} absolute size-6 top-[50%] translate-y-[-50%] right-4 cursor-pointer` }
-          src='public\closeIcon.png'
+          src={closeIcon}
           onClick={()=>{
             let currentInput = document.getElementById("searchBarFull") as HTMLInputElement
             if (currentInput !== null){
@@ -154,7 +158,7 @@ export default function Navbar(props:any) {
               })
               : loadingStateForSearchBar ?
               <div className='w-full h-full flex justify-center items-center'>
-                <img className='size-8 animate-spinLoading' src='public\loadingIndicator.png'></img>
+                <img className='size-8 animate-spinLoading' src={loadingIndicatorIcon}></img>
               </div>
               : (searchResults.length === 0 && searchInput.length !== 0) ? 
               <div className='w-full h-full flex justify-center items-center'>
@@ -180,7 +184,7 @@ export default function Navbar(props:any) {
             <div>
               <img 
               onClick={()=>{setShowMoreInfoForGame(false)}}
-              src='public\closeIcon.png' 
+              src={closeIcon} 
               className='size-8 absolute top-1 right-1 cursor-pointer'></img>
     
               <div className='flex flex-col justify-center items-center h-full w-64 gap-4'>
@@ -259,12 +263,12 @@ export default function Navbar(props:any) {
               
               <img 
               onClick={()=>{setShowMoreInfoForGame(false)}}
-              src='public\closeIcon.png' 
+              src={closeIcon}
               className='size-8 absolute top-1 right-1 cursor-pointer'></img>
               
 
               <div className='w-full h-full flex justify-center items-center'>
-                <img className='size-8 animate-spinLoading' src='public\loadingIndicator.png'></img>
+                <img className='size-8 animate-spinLoading' src={loadingIndicatorIcon}></img>
               </div>
 
             </div>
