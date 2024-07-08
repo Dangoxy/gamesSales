@@ -1,0 +1,34 @@
+.swiper-slide { width: auto !important; }
+.swiper-pagination{bottom:0px !important;}
+
+.swiper-button-next,.swiper-button-prev{
+    font-weight: 1000 !important;
+    color: #022523 !important;
+    
+}
+.swiper-button-next::after,.swiper-button-prev::after{
+    font-size: 32px !important;
+    
+}
+
+
+.swiper-pagination-bullet{
+    
+    width: 12px !important;
+    height: 12px !important;
+
+    transition: all 0.5s ease;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #022523 !important;
+    width: 24px !important;
+    height: 12px !important;
+    border-radius: 12px !important;
+
+    transition: all 0.5s ease;
+}
+
+.swiper-wrapper{
+    height: 100%;
+}

@@ -1,0 +1,38 @@
+.customCheckbox{
+    accent-color: #022523;
+    width: 16px;
+    height: 16px;
+    
+    
+}
+
+.customScroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 2px;
+    
+}
+
+.customScroll::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+    
+    
+}
+
+.customScroll::-webkit-scrollbar-thumb
+{
+	border-radius: 2px;
+    
+	background-image: -webkit-gradient(linear,
+        left bottom,
+        left top,
+        color-stop(0.44, #02252342),
+        color-stop(0.72, #02252342),
+        color-stop(0.86, #02252342));
+    
+    
+    
+}
